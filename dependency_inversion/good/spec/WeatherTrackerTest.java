@@ -31,7 +31,7 @@ public class WeatherTrackerTest {
         System.setOut(new PrintStream(outContent));
         tracker.setCurrentConditions("cloudy");
         MockNotifier mockNotifier = new MockNotifier();
-        tracker.notify(mockNotifier);
+        tracker.notify(mockNotifier, new NotificationFormatter());
 
         assertEquals("foo", outContent.toString());
     }

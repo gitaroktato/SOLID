@@ -1,8 +1,8 @@
 /**
  * Created by mrk on 4/8/14.
  */
-public class PenthouseSuite extends Apartment implements BedroomUpgradeable {
-    public PenthouseSuite() {
+public class PenthouseSuite2 extends Apartment implements BedroomUpgradeable {
+    public PenthouseSuite2() {
         this.numberOfBedrooms = 4;
     }
 
@@ -12,6 +12,6 @@ public class PenthouseSuite extends Apartment implements BedroomUpgradeable {
 
     @Override
     public void addOneMoreBedroom() {
-        this.numberOfBedrooms++;
+        this.numberOfBedrooms--;
     }
 }

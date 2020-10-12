@@ -15,7 +15,9 @@ public class MobileDeviceTest {
     public void testAlertsWhenRainy() {
         MobileDevice iPhone = new MobileDevice();
         System.setOut(new PrintStream(outContent));
-        iPhone.alertWeatherConditions("rainy");
+        var formatter = new NotificationFormatter();
+        String weather = formatter.formatWeatherConditions("rainy");
+        iPhone.alertWeatherConditions(weather);
 
         assertEquals("It is rainy", outContent.toString());
     }

@@ -8,7 +8,8 @@ public class WeatherTracker {
         this.currentConditions = weatherDescription;
     }
 
-    public void notify(Notifier notifier) {
-        notifier.alertWeatherConditions(currentConditions);
+    public void notify(Notifier notifier, NotificationFormatterInterface formatter) {
+        var notification = formatter.formatWeatherConditions(currentConditions);
+        notifier.alertWeatherConditions(notification);
     }
 }

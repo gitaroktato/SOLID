@@ -15,7 +15,9 @@ public class EmailClientTest {
     public void testAlertsWhenSunny() {
         EmailClient gmail = new EmailClient();
         System.setOut(new PrintStream(outContent));
-        gmail.alertWeatherConditions("sunny");
+        var formatter = new NotificationFormatter();
+        String weather = formatter.formatWeatherConditions("sunny");
+        gmail.alertWeatherConditions(weather);
 
         assertEquals("It is sunny", outContent.toString());
     }
