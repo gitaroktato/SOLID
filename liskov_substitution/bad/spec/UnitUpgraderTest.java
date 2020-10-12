@@ -21,6 +21,7 @@ public class UnitUpgraderTest {
         PenthouseSuite penthouse = new PenthouseSuite();
         UnitUpgrader upgrader = new UnitUpgrader();
         upgrader.upgrade(penthouse);
+        upgrader.upgradeBedrooms(penthouse);
 
         assertEquals(5, penthouse.numberOfBedrooms);
     }
